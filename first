@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+        .hover-button {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            padding: 20px 40px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        .hover-button:hover {
+            border-color: #0066cc;
+            background-color: #e0f7fa;
+            color: #0066cc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="hover-button">Hello people of the world</div>
+</body>
+</html>
