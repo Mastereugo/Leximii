@@ -7,13 +7,12 @@
     <style>
         body {
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-image: url("pigs/backgr.webp");
             font-family: Arial, sans-serif;
+            background-image: url("backgr.webp"); /* Corrected syntax */
+            background-repeat: no-repeat; /* Ensures no repeated background */
+            background-size: auto; /* Allows the image to scroll vertically */
+            background-position: top; /* Keeps the image aligned to the top */
+            height: 200vh; /* Makes the body twice the height of the viewport */
         }
         .hover-button {
             font-size: 24px;
