@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-image: url("pigs/backgr.webp"); /* Corrected syntax */
-            background-repeat: no-repeat; /* Prevents repeated background */
-            background-size: cover; /* Ensures the image covers the width */
-            background-position: top; /* Aligns the image at the top */
-            height: 200vh; /* Makes the body twice the height of the viewport */
-        }
-        .hover-button {
-            font-size: 24px;
-            font-weight: bold;
-            color: #333;
-            padding: 20px 40px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            text-align: center;
-            margin-top: 20px;
-        }
-        .hover-button:hover {
-            border-color: #0066cc;
-            background-color: #e0f7fa;
-            color: #0066cc;
-            cursor: pointer;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EUVER SHOP</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  /* <img src="poyu.jpg" alt="Description of the image"> */
-    <div class="hover-button"> Hello people of the world</div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to EUVER SHOP</h1>
+      <p>Get anything here</p>
+      <a href="#shop-now" class="buy-button">Buy Now</a>
+    </div>
+    <div class="social-buttons">
+      <a href="https://twitter.com" target="_blank" class="social twitter">T</a>
+      <a href="https://facebook.com" target="_blank" class="social facebook">F</a>
+      <a href="https://instagram.com" target="_blank" class="social instagram">I</a>
+    </div>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h2>Sample Products</h2>
+    <div class="product-grid">
+      <!-- 8 Product Boxes -->
+      <div class="product-box"><img src="1.jpg" alt="Product 1"><p>Product 1</p></div>
+      <div class="product-box"><img src="2.jpg" alt="Product 2"><p>Product 2</p></div>
+      <div class="product-box"><img src="3.jpg" alt="Product 3"><p>Product 3</p></div>
+      <div class="product-box"><img src="4.jpg" alt="Product 4"><p>Product 4</p></div>
+      <div class="product-box"><img src="5.jpg" alt="Product 5"><p>Product 5</p></div>
+      <div class="product-box"><img src="6.jpg" alt="Product 6"><p>Product 6</p></div>
+      <div class="product-box"><img src="7.jpg" alt="Product 7"><p>Product 7</p></div>
+      <div class="product-box"><img src="8.jpg" alt="Product 8"><p>Product 8</p></div>
+    </div>
+  </section>
+
+  <!-- Thank You Section -->
+  <footer class="thank-you">
+    <h2>Thank You for Visiting EUVER SHOP!</h2>
+    <p>We appreciate your support and look forward to serving you again. Have a great day!</p>
+  </footer>
 </body>
 </html>
