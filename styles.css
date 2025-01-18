@@ -18,6 +18,7 @@ body {
   background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
   position: relative;
+  padding: 20px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -103,7 +104,7 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 20px;
   justify-items: center;
 }
@@ -114,7 +115,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   text-align: center;
-  width: 200px;
+  width: 90%;
+  max-width: 200px;
 }
 
 .product-box img {
@@ -142,4 +144,43 @@ body {
 
 .thank-you p {
   font-size: 1.2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .buy-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .social {
+    width: 40px;
+    height: 40px;
+  }
+  .products h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 10px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .thank-you h2 {
+    font-size: 1.5rem;
+  }
+  .thank-you p {
+    font-size: 1rem;
+  }
 }
