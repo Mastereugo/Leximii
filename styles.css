@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Bahnschrift SemiBold', Bahnschrift SemiBold;
   background-color: #f9f9f9;
   color: #333;
   scroll-behavior: smooth;
@@ -11,83 +11,198 @@ body {
 .hero {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   height: 100vh;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background: radial-gradient(circle, #016485, #024f69, #013c78, #002e5b, #001a33, #000a13);
   color: white;
   position: relative;
   padding: 20px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  overflow: hidden; /* Ensure circles don't overflow */
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  position: relative; /* To bring it above the GIF */
+  z-index: 2; /* Ensure it's above the GIF */
+  left: 40px;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 4.1rem;
+  margin-bottom: 0px;
+  font-family: Bahnschrift SemiBold;
 }
 
 .hero p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-top: 0;
+  font-size: 1.8rem;
+  margin-bottom: 50px;
+  font-family: Bahnschrift SemiBold;
+  color: #ff1700;
 }
 
 .buy-button {
   text-decoration: none;
   color: white;
-  background-color: #ff5722;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 1.2rem;
+  background: linear-gradient(135deg, #ffa600, #ff6c22, #ff2f22, #ff1700);
+  padding: 12px 25px;
+  border-radius: 37px;
+  font-size: 1rem;
   font-weight: bold;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative; 
+  z-index: 3;
+  display: inline-block;
 }
 
 .buy-button:hover {
   background-color: #e64a19;
   transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.button-container {
+  display: flex;
+  gap: 32px; /* 50px space between the buy button and the text box */
+  align-items: center;
+}
+
+.text-box {
+  border: 4px solid #ff1700; /* Border color */
+  border-radius: 39px; /* Rounded corners */
+  padding: 12px 25px; /* Spacing inside the box */
+  font-size: 1rem; /* Text size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  color: #ffffff !important; /* Text color */
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center text vertically */
+  height: 12px; /* Height of the text box */
+  line-height: 1.2; /* Prevents line height issues */
+  margin-bottom: 0px;
+}
+
+
+/* logoadd */
+.logo {
+  position: absolute;
+  top: 50px; /* Aligns vertically to the center */
+  left: 55px; /* Positions the buttons to the right */
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-image {
+  width: 110px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  filter: invert(100%);
+}
+/* GIF Container */
+.hero-gif-container {
+  position: absolute; /* Position relative to the parent */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Behind the hero content */
+  overflow: hidden;
+}
+
+/* GIF Styling */
+.hero-gif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  opacity: 0.5; 
+   mix-blend-mode: multiply;
+   /*clip-path: inset(0 0 1% 0);*/
+   background-color: #000;
+   z-index: 0; /* Behind the hero content */
 }
 
 /* Social Buttons */
 .social-buttons {
   position: absolute;
-  right: 20px;
-  bottom: 20px;
+  top: 50%; /* Aligns vertically to the center */
+  right: 40px; /* Positions the buttons to the right */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 35px; /* Adjust space between logos */
+  transform: translateY(-50%); /* Centers vertically relative to top 50% */
+  z-index: 4;
+  border: 4px solid #ff1700;
+  border-radius: 39px;
+  padding: 10px;
 }
 
 .social {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  width: 50px;
-  height: 50px;
+  width: 40px; /* Set a fixed size for all buttons */
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white; /* Add a background color if needed */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social img {
+  width: 70%; /* Make the logo fit well inside the button */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .social:hover {
   transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .social.twitter {
-  background-color: #1da1f2;
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0);
+}
+.social.twitter img {
+  width: 90%; /* Ensure the logo fits within the container */
+  height: auto; /* Maintain aspect ratio */
+}
+.social.facebook {
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0);
 }
 
-.social.facebook {
-  background-color: #3b5998;
+.social.facebook img {
+  width: 100%; /* Ensure the logo fits within the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .social.instagram {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0);
+} 
+
+.social.instagram img {
+  width: 90%; /* Ensure the logo fits within the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+}
+
+.social.pump {
+  transition: transform 0.3s ease;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.social.pump img {
+  width: 140%; /* Ensure the logo fits within the container */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Products Section */
@@ -119,6 +234,16 @@ body {
   max-width: 200px;
 }
 
+.product-box:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-box img:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 .product-box img {
   max-width: 100%;
   border-radius: 10px;
@@ -127,23 +252,28 @@ body {
 .product-box p {
   margin-top: 10px;
   font-weight: bold;
+  color: pink;
 }
 
 /* Thank You Section */
 .thank-you {
   padding: 50px 20px;
-  background-color: #6a11cb;
+  background: radial-gradient(circle, #016485, #024f69, #013c78, #002e5b, #001a33, #000a13);
   color: white;
   text-align: center;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
 }
 
 .thank-you h2 {
   font-size: 2rem;
   margin-bottom: 10px;
+  font-family: Bahnschrift SemiBold;
 }
 
 .thank-you p {
   font-size: 1.2rem;
+  font-family: Bahnschrift SemiBold;
 }
 
 /* Media Queries */
@@ -165,6 +295,8 @@ body {
   .products h2 {
     font-size: 2rem;
   }
+  .logo {
+    max-width: 70px; /* Smaller size for smaller screens */
 }
 
 @media (max-width: 480px) {
