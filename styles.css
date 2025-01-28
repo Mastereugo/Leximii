@@ -2,7 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-
+  text-decoration: none;
 }
 
 /* Body Styling */
@@ -95,8 +95,9 @@ body {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin: 10px 0;
+  color: #f42e1c
 }
 
 .button-container {
@@ -206,14 +207,15 @@ body {
 
 /* Products Section */
 .products {
-  padding: 50px 20px;
+  padding: 30px 10px;
   background-color: #f0f8ff;
   text-align: center;
 }
 
 .products h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-family: 'Bahnschrift SemiBold', Bahnschrift SemiBold;
 }
 
 .product-grid {
@@ -224,7 +226,7 @@ body {
 }
 
 .product-box {
-  background: white;
+  background: radial-gradient(circle,#1b0000, #42013c, #c22104);
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -239,19 +241,32 @@ body {
 }
 
 .product-box img:hover {
-  transform: scale(1.2);
+  transform: scale(1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .product-box img {
   max-width: 100%;
   border-radius: 10px;
+  text-decoration: none;
+  border: 1px solid #00000082;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .product-box p {
   margin-top: 10px;
   font-weight: bold;
-  color: pink;
+  color: rgb(255, 255, 255);
+}
+
+.name {
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: 2px solid #ea0707;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 5px 25px;
 }
 
 /* Thank You Section */
