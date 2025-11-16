@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(135deg, #ffd8e0, #dff6ff);
+  text-align: center;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 40px;
+  color: #ff4f8b;
+  text-shadow: 2px 2px white;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #666;
+}
+
+#game-area {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  height: 70vh;
+}
+
+.player-side {
+  width: 48%;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.player-side h2 {
+  font-size: 28px;
+  color: #333;
+}
+
+.choice-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: 20px;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #444;
+}
+
+.indicator {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #bbb;
+  margin: 10px auto;
+  border: 3px solid #888;
+}
+
+.ready {
+  background: #5cf76c !important;
+}
+
+.result-banner {
+  margin-top: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  height: 40px;
+}
+
+.winner {
+  color: #2ecc71;
+  text-shadow: 1px 1px white;
+}
+
+.loser {
+  color: #e74c3c;
+  text-shadow: 1px 1px white;
+}
+
+
+#playAgainBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
